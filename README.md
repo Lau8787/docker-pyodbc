@@ -23,3 +23,13 @@ Run the new docker image:
 
     docker run -dit --name my-pyodbc-image pyodbc:Dockerfile
     docker exec -i -t my-pyodbc-image /bin/bash
+
+2.	Push to Hub
+
+Push the docker to Docker Hub:
+
+    docker commit -m "Created pyodbc container," -a "pyodbc" my-pyodbc-image laurensverhoeven/pyodbc:latest
+    docker push laurensverhoeven/pyodbc
+
+    docker commit -m "Created pyodbc container," -a "pyodbc" my-pyodbc-image USER/pyodbc:latest
+    docker push USER/pyodbc
